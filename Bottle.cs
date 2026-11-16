@@ -6,5 +6,9 @@ namespace zadania_5_24832
 {
     internal class Bottle
     {
+        double capacity;
+        double procent;
+
+
     }
 }
