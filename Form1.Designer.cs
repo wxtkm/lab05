@@ -56,7 +56,6 @@
             lblTitle.Size = new Size(126, 15);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Kalkulator procentowy";
-            lblTitle.Click += lblTitle_Click_1;
             // 
             // gbInput
             // 
@@ -237,7 +236,6 @@
         private Label lblTitle;
         private GroupBox gbInput;
         private Label lblCapacity;
-        private MaskedTextBox maskedTextBox1;
         private TextBox txtCapacity;
         private Label lblPercent;
         private Label lblCount;
