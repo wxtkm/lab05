@@ -144,6 +144,7 @@
             // cmbVessel
             // 
             cmbVessel.FormattingEnabled = true;
+            cmbVessel.Items.AddRange(new object[] { "Kieliszek (50 ml)", "", "Szklanka (250 ml)", "", "Kubek (300 ml)", "", "Butelka (500 ml)", "", "Butelka (1000 ml)" });
             cmbVessel.Location = new Point(140, 219);
             cmbVessel.Name = "cmbVessel";
             cmbVessel.Size = new Size(121, 23);
@@ -152,6 +153,7 @@
             // cmbSolution
             // 
             cmbSolution.FormattingEnabled = true;
+            cmbSolution.Items.AddRange(new object[] { "Woda 0%", "", "Roztwór 5%", "", "Roztwór 10%", "", "Roztwór 20%", "", "Roztwór 40%", "", "Roztwór 70%", "", "Roztwór 96%" });
             cmbSolution.Location = new Point(140, 258);
             cmbSolution.Name = "cmbSolution";
             cmbSolution.Size = new Size(121, 23);
