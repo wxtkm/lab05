@@ -12,6 +12,18 @@ namespace zadania_5_24832
 
             btnCalculate.Click += btnCalculate_Click;
             btnClear.Click += btnClear_Click;
+            cmbVessel.DisplayMember = nameof(VesselOption.DisplayName);
+            cmbVessel.DataSource = TypicalOptions.Vessels;
+            cmbVessel.SelectedIndex = -1;
+
+            cmbSolution.DisplayMember = nameof(SolutionOption.DisplayName);
+            cmbSolution.DataSource = TypicalOptions.Solutions;
+            cmbSolution.SelectedIndex = -1;
+
+            btnCalculate.Click += btnCalculate_Click;
+            btnClear.Click += btnClear_Click;
+            cmbVessel.SelectedIndexChanged += cmbVessel_SelectedIndexChanged;
+            cmbSolution.SelectedIndexChanged += cmbSolution_SelectedIndexChanged;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -83,6 +95,24 @@ namespace zadania_5_24832
             lblPureVolume.Text = "0 ml";
 
             txtCapacity.Focus();
+        }
+
+        private void cmbVessel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbVessel.SelectedItem is VesselOption vessel)
+            {
+                txtCapacity.Text = vessel.CapacityMl.ToString(
+                    CultureInfo.CurrentCulture);
+            }
+        }
+
+        private void cmbSolution_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSolution.SelectedItem is SolutionOption solution)
+            {
+                txtPercent.Text = solution.Percent.ToString(
+                    CultureInfo.CurrentCulture);
+            }
         }
     }
 }
