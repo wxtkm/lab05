@@ -114,5 +114,25 @@ namespace zadania_5_24832
                     CultureInfo.CurrentCulture);
             }
         }
+
+        private void lblPureVolume_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPercent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPercent_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSolution_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

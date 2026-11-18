@@ -59,7 +59,7 @@
             // 
             // gbInput
             // 
-            gbInput.Location = new Point(21, 50);
+            gbInput.Location = new Point(21, 48);
             gbInput.Name = "gbInput";
             gbInput.Size = new Size(115, 22);
             gbInput.TabIndex = 1;
@@ -69,7 +69,7 @@
             // lblCapacity
             // 
             lblCapacity.AutoSize = true;
-            lblCapacity.Location = new Point(21, 88);
+            lblCapacity.Location = new Point(21, 93);
             lblCapacity.Name = "lblCapacity";
             lblCapacity.Size = new Size(91, 15);
             lblCapacity.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // txtCapacity
             // 
-            txtCapacity.Location = new Point(155, 85);
+            txtCapacity.Location = new Point(140, 90);
             txtCapacity.Name = "txtCapacity";
             txtCapacity.Size = new Size(100, 23);
             txtCapacity.TabIndex = 4;
@@ -85,16 +85,17 @@
             // lblPercent
             // 
             lblPercent.AutoSize = true;
-            lblPercent.Location = new Point(29, 122);
+            lblPercent.Location = new Point(21, 125);
             lblPercent.Name = "lblPercent";
             lblPercent.Size = new Size(82, 15);
             lblPercent.TabIndex = 5;
             lblPercent.Text = "Zawartość (%)";
+            lblPercent.Click += lblPercent_Click;
             // 
             // lblCount
             // 
             lblCount.AutoSize = true;
-            lblCount.Location = new Point(31, 154);
+            lblCount.Location = new Point(21, 158);
             lblCount.Name = "lblCount";
             lblCount.Size = new Size(80, 15);
             lblCount.TabIndex = 6;
@@ -102,21 +103,22 @@
             // 
             // txtPercent
             // 
-            txtPercent.Location = new Point(161, 122);
+            txtPercent.Location = new Point(140, 125);
             txtPercent.Name = "txtPercent";
             txtPercent.Size = new Size(100, 23);
             txtPercent.TabIndex = 7;
+            txtPercent.TextChanged += txtPercent_TextChanged;
             // 
             // txtCount
             // 
-            txtCount.Location = new Point(155, 158);
+            txtCount.Location = new Point(140, 158);
             txtCount.Name = "txtCount";
             txtCount.Size = new Size(100, 23);
             txtCount.TabIndex = 8;
             // 
             // gbTypes
             // 
-            gbTypes.Location = new Point(33, 193);
+            gbTypes.Location = new Point(23, 203);
             gbTypes.Name = "gbTypes";
             gbTypes.Size = new Size(113, 20);
             gbTypes.TabIndex = 9;
@@ -126,7 +128,7 @@
             // lblVessel
             // 
             lblVessel.AutoSize = true;
-            lblVessel.Location = new Point(37, 226);
+            lblVessel.Location = new Point(38, 236);
             lblVessel.Name = "lblVessel";
             lblVessel.Size = new Size(74, 15);
             lblVessel.TabIndex = 0;
@@ -135,17 +137,18 @@
             // lblSolution
             // 
             lblSolution.AutoSize = true;
-            lblSolution.Location = new Point(37, 256);
+            lblSolution.Location = new Point(38, 266);
             lblSolution.Name = "lblSolution";
             lblSolution.Size = new Size(75, 15);
             lblSolution.TabIndex = 10;
             lblSolution.Text = "Typ roztworu";
+            lblSolution.Click += lblSolution_Click;
             // 
             // cmbVessel
             // 
             cmbVessel.FormattingEnabled = true;
             cmbVessel.Items.AddRange(new object[] { "Kieliszek (50 ml)", "", "Szklanka (250 ml)", "", "Kubek (300 ml)", "", "Butelka (500 ml)", "", "Butelka (1000 ml)" });
-            cmbVessel.Location = new Point(140, 219);
+            cmbVessel.Location = new Point(140, 234);
             cmbVessel.Name = "cmbVessel";
             cmbVessel.Size = new Size(121, 23);
             cmbVessel.TabIndex = 11;
@@ -154,14 +157,14 @@
             // 
             cmbSolution.FormattingEnabled = true;
             cmbSolution.Items.AddRange(new object[] { "Woda 0%", "", "Roztwór 5%", "", "Roztwór 10%", "", "Roztwór 20%", "", "Roztwór 40%", "", "Roztwór 70%", "", "Roztwór 96%" });
-            cmbSolution.Location = new Point(140, 258);
+            cmbSolution.Location = new Point(140, 266);
             cmbSolution.Name = "cmbSolution";
             cmbSolution.Size = new Size(121, 23);
             cmbSolution.TabIndex = 12;
             // 
             // btnCalculate
             // 
-            btnCalculate.Location = new Point(89, 314);
+            btnCalculate.Location = new Point(38, 329);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(75, 23);
             btnCalculate.TabIndex = 13;
@@ -170,7 +173,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(245, 314);
+            btnClear.Location = new Point(165, 329);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 23);
             btnClear.TabIndex = 14;
@@ -179,9 +182,9 @@
             // 
             // gbResults
             // 
-            gbResults.Location = new Point(554, 37);
+            gbResults.Location = new Point(574, 48);
             gbResults.Name = "gbResults";
-            gbResults.Size = new Size(62, 20);
+            gbResults.Size = new Size(62, 22);
             gbResults.TabIndex = 15;
             gbResults.TabStop = false;
             gbResults.Text = "Wyniki";
@@ -189,7 +192,7 @@
             // lblTotalVolume
             // 
             lblTotalVolume.AutoSize = true;
-            lblTotalVolume.Location = new Point(532, 88);
+            lblTotalVolume.Location = new Point(574, 85);
             lblTotalVolume.Name = "lblTotalVolume";
             lblTotalVolume.Size = new Size(120, 15);
             lblTotalVolume.TabIndex = 16;
@@ -198,11 +201,12 @@
             // lblPureVolume
             // 
             lblPureVolume.AutoSize = true;
-            lblPureVolume.Location = new Point(538, 126);
+            lblPureVolume.Location = new Point(574, 122);
             lblPureVolume.Name = "lblPureVolume";
             lblPureVolume.Size = new Size(177, 15);
             lblPureVolume.TabIndex = 17;
             lblPureVolume.Text = "Objętość czystej substancji: 0 ml";
+            lblPureVolume.Click += lblPureVolume_Click;
             // 
             // Form1
             // 
